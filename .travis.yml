@@ -27,7 +27,8 @@ deploy:
   github_token: $GITHUB_TOKEN
   local_dir: build
   on:
-    branch: master
+    all_branches: true
+    condition: $TRAVIS_BRANCH =~ ^(master|main)$
 
 notifications:
   email:
